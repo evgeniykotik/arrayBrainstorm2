@@ -14,7 +14,7 @@ function task11($array)
 {
     $result = [];
     $count = count($array);
-    for ($i = 0; $i < count($array); $i++) {
+    for ($i = 0; $i < $count; $i++) {
         if (!isNullArray($array[$i])) {
             $result[] = $array[$i];
         }
