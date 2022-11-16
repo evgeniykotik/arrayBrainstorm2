@@ -2,9 +2,10 @@
 
 function task18($array)
 {
+    $count = count($array);
     $result = [];
-    for ($i = 0; $i < count($array); $i++) {
-        for ($j = 0; $j < count($array); $j++) {
+    for ($i = 0; $i < $count; $i++) {
+        for ($j = 0; $j < $count; $j++) {
             if ($array[$j][$i] < 0) {
                 $result[] = $array[$j];
             }
