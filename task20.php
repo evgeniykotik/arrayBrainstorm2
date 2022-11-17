@@ -31,16 +31,6 @@ function sumOfArray($array)
     return $sum;
 }
 
-function intoArray($char, $array)
-{
-    for ($i = 0; $i < count($array); $i++) {
-        if ($array[$i] === $char) {
-            return true;
-        }
-    }
-    return false;
-}
-
 function sortOfArray($arr, $ascending = true)
 {
     for ($i = 0; $i < count($arr) - 1; $i++) {
