@@ -29,23 +29,23 @@ function keyOfFirstNegativeInColumn($array)
 
 function task9($array)
 {
-    $result=[];
+    $result = [];
     $keyOfFirstNegativeInColumn = keyOfFirstNegativeInColumn($array);
     $minInColumn = minInColumn($array);
     for ($i = 0; $i < count($array); $i++) {
         for ($j = 0; $j < count($array[0]); $j++) {
             if ($keyOfFirstNegativeInColumn[$j] === null) {
-               $result[0][$j]=$minInColumn[$j];
-               $result[$i+1][$j]=$array[$i][$j];
+                $result[0][$j] = $minInColumn[$j];
+                $result[$i + 1][$j] = $array[$i][$j];
             } else {
-                $result[0][$j]=$array[0][$j];
-                $result[$i+1][$j]=$array[$i][$j];
+                $result[0][$j] = $array[0][$j];
+                $result[$i + 1][$j] = $array[$i][$j];
             }
         }
     }
     for ($i = 0; $i < count($minInColumn); $i++) {
-        if ($keyOfFirstNegativeInColumn[$i]!==null) {
-            $result[$keyOfFirstNegativeInColumn[$i]+1][$i]=$minInColumn[$i];
+        if ($keyOfFirstNegativeInColumn[$i] !== null) {
+            $result[$keyOfFirstNegativeInColumn[$i] + 1][$i] = $minInColumn[$i];
         }
     }
     return $result;
