@@ -17,10 +17,10 @@ function sortOfArray($arr, $ascending = true)
 function task19($array, $p)
 {
     for ($i = 0; $i < count($array); $i++) {
-        $array[$i][] =$p;
+        $array[$i][] = $p;
         $array[$i] = sortOfArray($array[$i], false);
     }
     return $array;
 }
 
-var_dump(task19([[3,2,5],[4,3,8]],  4));
+var_dump(task19([[3, 2, 5], [4, 3, 8]], 4));
